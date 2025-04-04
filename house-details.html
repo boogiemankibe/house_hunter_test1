@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details | Dream Homes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .image-gallery img {
+            transition: transform 0.3s ease;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation (same as index.html) -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="index.html" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-gray-500 text-lg">Dream Homes</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="py-2 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Home</a>
+                    <a href="#" class="py-2 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Listings</a>
+                    <a href="#" class="py-2 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Property Details Section -->
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <!-- Property Title and Price -->
+        <div class="flex justify-between items-start mb-6">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-800">Modern Luxury Villa</h1>
+                <p class="text-gray-600 mt-1"><i class="fas fa-map-marker-alt mr-1"></i> Beverly Hills, CA</p>
+            </div>
+            <div class="text-right">
+                <p class="text-2xl font-bold text-blue-600">$1,250,000</p>
+                <p class="text-sm text-gray-500">$1,250/sqft</p>
+            </div>
+        </div>
+
+        <!-- Image Gallery -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 image-gallery">
+            <div class="md:col-span-2">
+                <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" 
+                     alt="Main view" class="w-full h-96 object-cover rounded-lg">
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg" 
+                     alt="Living room" class="w-full h-48 object-cover rounded-lg">
+                <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg" 
+                     alt="Kitchen" class="w-full h-48 object-cover rounded-lg">
+                <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg" 
+                     alt="Bedroom" class="w-full h-48 object-cover rounded-lg">
+                <img src="https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg" 
+                     alt="Bathroom" class="w-full h-48 object-cover rounded-lg">
+            </div>
+        </div>
+
+        <!-- Property Details Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <!-- Main Details -->
+            <div class="md:col-span-2">
+                <h2 class="text-xl font-semibold mb-4">Property Description</h2>
+                <p class="text-gray-700 mb-6">
+                    This stunning modern villa offers luxury living at its finest. Featuring 4 bedrooms, 3.5 bathrooms, 
+                    and breathtaking city views, this property is perfect for entertaining. The open floor plan includes 
+                    a chef's kitchen with high-end appliances, spacious living areas, and floor-to-ceiling windows that 
+                    flood the space with natural light.
+                </p>
+                
+                <h2 class="text-xl font-semibold mb-4">Features</h2>
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-bed mr-2 text-blue-500"></i>
+                        <span>4 Bedrooms</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-bath mr-2 text-blue-500"></i>
+                        <span>3.5 Bathrooms</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-ruler-combined mr-2 text-blue-500"></i>
+                        <span>2,500 sqft</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-car mr-2 text-blue-500"></i>
+                        <span>2 Garage spaces</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-swimming-pool mr-2 text-blue-500"></i>
+                        <span>Infinity pool</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-utensils mr-2 text-blue-500"></i>
+                        <span>Gourmet kitchen</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Card -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 h-fit">
+                <h3 class="text-lg font-semibold mb-4">Schedule a Viewing</h3>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="date">Preferred Date</label>
+                    <input type="date" id="date" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="time">Preferred Time</label>
+                    <select id="time" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>Morning (9am-12pm)</option>
+                        <option>Afternoon (1pm-5pm)</option>
+                        <option>Evening (6pm-8pm)</option>
+                    </select>
+                </div>
+                <button onclick="window.location.href='booking.html'" 
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition duration-300">
+                    Book Now
+                </button>
+                <p class="text-xs text-gray-500 mt-2">A $500 booking fee will be required</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Dream Homes</h3>
+                    <p class="text-gray-400">Finding your perfect home since 2010.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Listings</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <p class="text-gray-400"><i class="fas fa-phone mr-2"></i> (555) 123-4567</p>
+                    <p class="text-gray-400"><i class="fas fa-envelope mr-2"></i> info@dreamhomes.com</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2023 Dream Homes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
