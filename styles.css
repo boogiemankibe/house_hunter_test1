@@ -1,0 +1,99 @@
+/* Custom styles for Dream Homes real estate website */
+
+/* Base styles */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+}
+
+/* Custom button styles */
+.btn-primary {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Property card hover effect */
+.property-card {
+    transition: all 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form input focus styles */
+.input-focus:focus {
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Custom animation for loading states */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1d4ed8;
+}
+
+/* Image gallery zoom effect */
+.gallery-image {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+
+.gallery-image:hover {
+    transform: scale(1.02);
+}
+
+/* Booking progress indicator */
+.booking-step.active .step-number {
+    background-color: #2563eb;
+    color: white;
+}
+
+.booking-step.completed .step-number {
+    background-color: #10b981;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .property-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .booking-steps {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
