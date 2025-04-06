@@ -1,7 +1,20 @@
 // Main JavaScript for Dream Homes real estate website
 
+// Authentication check
+function checkAuth() {
+    const publicPages = ['login.html', 'index.html'];
+    const currentPage = window.location.pathname.split('/').pop();
+    
+    if (!localStorage.getItem('dreamhomes_auth') && 
+        !publicPages.includes(currentPage)) {
+        const returnUrl = encodeURIComponent(window.location.pathname);
+        window.location.href = `login.html?return=${returnUrl}`;
+    }
+}
+
 // DOM Ready
 document.addEventListener('DOMContentLoaded', function() {
+    checkAuth();
     // Initialize property filter functionality
     initPropertyFilters();
     
