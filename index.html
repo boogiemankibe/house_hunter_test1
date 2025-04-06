@@ -19,17 +19,43 @@
             <div class="flex justify-between">
                 <div class="flex space-x-7">
                     <a href="index.html" class="flex items-center py-4 px-2">
-                        <span class="font-semibold text-gray-500 text-lg">Dream Homes</span>
+                        <span class="font-semibold text-gray-500 text-lg">Dream Homes Kenya</span>
                     </a>
                 </div>
                 <div class="flex items-center space-x-3">
                     <a href="index.html" class="py-2 px-2 text-blue-600 font-semibold border-b-2 border-blue-600">Home</a>
-                    <a href="#" class="py-2 px-2 text-gray-500 font-semibold hover:text-blue-500 transition">Listings</a>
-                    <a href="#" class="py-2 px-2 text-gray-500 font-semibold hover:text-blue-500 transition">Contact</a>
+                    <a href="house-details.html" class="py-2 px-2 text-gray-500 font-semibold hover:text-blue-500 transition">Properties</a>
+                    <a href="booking.html" class="py-2 px-2 text-gray-500 font-semibold hover:text-blue-500 transition">Bookings</a>
+                    <div id="auth-section">
+                        <a href="login.html" class="py-2 px-2 text-blue-600 font-semibold hover:text-blue-800 transition">Login</a>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
+
+    <script>
+        // Update auth section based on login status
+        function updateAuthSection() {
+            const authSection = document.getElementById('auth-section');
+            if (localStorage.getItem('isAuthenticated')) {
+                authSection.innerHTML = `
+                    <button onclick="logout()" class="py-2 px-2 text-red-600 font-semibold hover:text-red-800 transition">
+                        Logout
+                    </button>
+                `;
+            }
+        }
+
+        // Logout function
+        function logout() {
+            localStorage.removeItem('isAuthenticated');
+            window.location.href = 'login.html';
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', updateAuthSection);
+    </script>
 
     <!-- Hero Section -->
     <div class="relative bg-blue-700 h-96 flex items-center justify-center">
