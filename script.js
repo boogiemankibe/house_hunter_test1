@@ -1,5 +1,44 @@
 // Main JavaScript for Dream Homes real estate website
 
+// Property data with booking status
+const properties = {
+    "Modern Luxury Villa": { booked: false },
+    "Oceanfront Beach House": { booked: false },
+    "Downtown Luxury Apartment": { booked: false },
+    "Cozy Cottage": { booked: false },
+    "Charming Townhouse": { booked: false },
+    "Elegant Family Home": { booked: false },
+    "Stylish Loft": { booked: false },
+    "Luxury Penthouse": { booked: false }
+};
+
+// Book a property
+function bookProperty(propertyName) {
+    if (properties[propertyName]) {
+        properties[propertyName].booked = true;
+        updatePropertyCard(propertyName);
+        return true;
+    }
+    return false;
+}
+
+// Update property card UI
+function updatePropertyCard(propertyName) {
+    const cards = document.querySelectorAll('.property-card');
+    cards.forEach(card => {
+        if (card.querySelector('h3').textContent === propertyName) {
+            if (properties[propertyName].booked) {
+                card.classList.add('opacity-75');
+                const button = card.querySelector('a');
+                button.textContent = 'Booked';
+                button.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                button.classList.add('bg-gray-500', 'cursor-not-allowed');
+                button.onclick = (e) => e.preventDefault();
+            }
+        }
+    });
+}
+
 // Authentication check
 function checkAuth() {
     const publicPages = ['login.html', 'index.html'];
